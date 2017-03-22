@@ -1,0 +1,41 @@
+<layout name="Layout/dialog_layout"  replace="{__CONTENT__}" />
+
+<body style="width: 400px;">
+    <div class="pop_cont pop_table" style="height:auto;">
+        <table width="100%">
+            <tr>
+				<th>文件地址<!--文件地址--></th>
+				<td>
+                    {$file.path}
+                </td>
+			</tr>
+            <tr>
+				<th>状态<!--状态--></th>
+				<td>
+                    {$file.status}
+                </td>
+			</tr>
+            <tr>
+				<th>类型(1:图<!--类型(1:图片 2:文件)--></th>
+				<td>
+                    {$file.type}
+                </td>
+			</tr>
+            <tr>
+				<th>创建时间<!--创建时间--></th>
+				<td>
+                    {$file.gmt_create|date='y-m-d H:i:s',###}
+                </td>
+			</tr>
+            <tr>
+				<th>备注<!--备注--></th>
+				<td>
+                    {$file.note}
+                </td>
+			</tr>
+        </table>
+    </div>
+    <div class="pop_bottom">
+        <button type="button" class="btn fr" id="J_dialog_close">关闭</button>
+    </div>
+</body>

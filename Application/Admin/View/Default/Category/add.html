@@ -1,0 +1,44 @@
+<layout name="Layout/base_layout" replace="{__CONTENT__}" xmlns="http://www.w3.org/1999/html"/>
+
+<body>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">分类添加</h1>
+    </div>
+</div><!--/.row-->
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal J_validateForm J_ajaxForm demoform" action="{:U('category/do_add')}" method="post">
+                    <fieldset>
+                        <input type="hidden" name="parent" value="{$category.id}">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="title">分类名</label>
+                            <div class="col-md-9">
+                                <input id="title" name="name" type="text" placeholder="分类名，不超过10个字" class="form-control" datatype="s1-10" errormsg="分类名不能超过10个字"">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="sort">排序</label>
+                            <div class="col-md-9">
+                                <input id="sort" name="sort" type="text" placeholder="默认为1" class="form-control" datatype="n0-10000" errormsg="填写错误">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <div class="pop_bottom">
+                        <button type="submit" class="btn btn_submit J_ajax_submit_btn">提交</button>
+                        <a type="submit" class="btn" href="javascript:history.go(-1)">返回</a>
+                        <span id="msgdemo2" style="margin-left:30px;"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__JS1__/validate/Validform_v5.3.2_ncr_min.js"></script>
+<script type="text/javascript" src="__JS__/common.js"></script>
+</body>

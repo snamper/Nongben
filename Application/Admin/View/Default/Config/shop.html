@@ -1,0 +1,125 @@
+<layout name="Layout/base_layout"  replace="{__CONTENT__}" />
+
+<body>
+
+<div class="wrap">
+
+    <div class="nav">
+        <div class="form_title">
+            <span>配置管理</span>
+        </div>
+    </div>
+
+    <form class="J_validateForm J_ajaxForm" data-role="list" action="{:U('config/do_shop')}" method="post">
+        <div>
+
+            <div class="nav_tab">
+                <ul>
+                    <!--<li><a href="{:U('index')}">系统配置</a></li>-->
+                    <li><a href="javascript:void(0)" class="selected">商城配置</a></li>
+                </ul>
+            </div>
+
+            <div id="tab1" class="tabson">
+                <table class="tab_info">
+                    <tr>
+                  <col width="20%"/>
+                        <col width="30%" align="right"/>
+                        <col width="30%"/>
+                    </tr>
+                    <tr >
+                        <th align="right"><label>是否开启包邮活动<b>*</b></label></th>
+                        <td>
+                            {$config.freeFreight|\\Common\\Util\\EnumTemplate::enumRadio='Bool','freeFreight','radio'}
+                      </td>
+                        <td align="left"></td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>包邮金额<b>*</b></label></th>
+                        <td>
+                            <!--<input name="return_order_id[]" type="hidden" value="{$return_order[0]['id']}">-->
+                            <input name="freeFrieightAmount" type="text" class="input length_4" value="{$config.freeFrieightAmount}"/>
+                      </td>
+                        <td align="left">订单金额达到此额度时包邮</td>
+                  </tr>
+
+
+                    <tr >
+                        <th align="right"><label>配送方式说明<b>*</b></label></th>
+                        <td>
+                            <input name="shippingNote" type="text" class="input length_4" value="{$config.shippingNote}"/>
+                      </td>
+                        <td align="left">用户在填写订单时显示</td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>周边配送费用（元）<b>*</b></label></th>
+                        <td>
+                            <input name="aroundFreight" type="text" class="input length_4" value="{$config.aroundFreight}"/>
+                      </td>
+                        <td align="left">周边商品统一配送费用</td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>订单保留时间（分钟）<b>*</b></label></th>
+                        <td>
+
+                            <input name="orderRetentionTime" type="text" class="input length_4" value="{$config.orderRetentionTime}"/>
+                      </td>
+                        <td align="left">超时未付款订单自动取消</td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>购物车商品保留时间（天）<b>*</b></label></th>
+                        <td>
+                            <input name="cartRetentionTime" type="text" class="input length_4" value="{$config.cartRetentionTime}"/>
+                      </td>
+                        <td align="left">超时未下单，系统自动清理</td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>自动确认收货时间（天）<b>*</b></label></th>
+                        <td>
+
+                            <input name="orderConfirmGoods" type="text" class="input length_4" value="{$config.orderConfirmGoods}"/>
+                      </td>
+                        <td align="left">订单自发货之日起，超过此时间未收货时系统自动确认收货</td>
+                  </tr>
+
+                    <tr >
+                        <th align="right"><label>退货期限（天）<b>*</b></label></th>
+                        <td>
+
+                            <input name="refundTime" type="text" class="input length_4" value="{$config.refundTime}"/>
+                        </td>
+                        <td align="left">自退货申请审核成功后，超过此时间未提交退货物流系统自动取消退货申请</td>
+                    </tr>
+
+                    <tr >
+                        <th align="right"><label>退货地址<b>*</b></label></th>
+                        <td>
+
+                            <input name="refundAddress" type="text" class="input length_6" value="{$config.refundAddress}"/>
+                        </td>
+                        <td align="left">退货地址</td>
+                    </tr>
+
+
+
+                </table>
+          </div>
+        </div>
+
+        <div class="btn_wrap">
+            <div class="btn_wrap_pd">
+                <button type="submit" class="btn btn_submit mr10 J_ajax_submit_btn J_validate_btn">提交</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script type="text/javascript" src="__JS__/common.js"></script>
+
+</body>

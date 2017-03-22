@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>宁波农本</title>
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link href="__CSS__/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+		<link href="__CSS__/style.css" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Cultivation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<script src="__JS__/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="__CSS__/flexslider.css" type="text/css" media="screen" />
+		<!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="__JS__/move-top.js"></script>
+		<script type="text/javascript" src="__JS__/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1200);
+				});
+			});
+		</script>
+		<!---End-smoth-scrolling---->
+		<link rel="stylesheet" href="__CSS__/swipebox.css">
+		<script src="__JS__/jquery.swipebox.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+		<!--Animation-->
+		<script src="__JS__/wow.min.js"></script>
+		<link href="__CSS__/animate.css" rel='stylesheet' type='text/css' />
+		<script>
+			new WOW().init();
+		</script>
+		<!---/End-Animation---->
+
+	</head>
+
+	<body>
+		<div class="header" id="home">
+			<div class="container">
+				<div class="header-top">
+					<div class="top-menu">
+						<span class="menu"><img src="__IMG__/nav.png" alt=""/> </span>
+						<ul>
+							<li>
+								<a href="{:U('Index/index')}" class="active">首页</a>
+							</li><label>/</label>
+							<li>
+								<a href="{:U('Academy/index')}">跟我学</a>
+							</li><label>/</label>
+							<li>
+								<a href="{:U('Shop/shop')}">商城</a>
+							</li><label>/</label>
+							<li>
+								<a href="{:U('Online/online')}">在线监测</a>
+							</li><label>/</label>
+							<li>
+								<a href="{:U('Source/trace')}">农产品溯源</a>
+							</li><label>/</label>
+							<li>
+								<a href="{:U('Info/news')}">农业资讯</a>
+							</li>
+						</ul>
+						<!-- script for menu -->
+
+						<script>
+							$("span.menu").click(function() {
+								$(".top-menu ul").slideToggle("slow", function() {});
+							});
+						</script>
+						<!-- //script for menu -->
+					</div>
+
+					<div class="clearfix"></div>
+
+				</div>
+				<div class="logo wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a href="index.html"><img src="__IMG__/logo.png" width="100%" /></a>
+				</div>
+				<div class="header-bottom">
+					<div class="header-grids">
+						<div class="col-md-3 col-sm-3 header-grid">
+							<div class="header-img1 wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+								<img src="__IMG__/icon7.png" class="img-responsive">
+								<h4>跟我学</h4>
+								<p>将互联网技术与农业相结合，用户可在网页上自行学习栽培，育苗等只是，实现农业发展信息化，提高整体农业知识...</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 header-grid">
+							<div class="header-img1 wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+								<img src="__IMG__/icon5.png" class="img-responsive">
+								<h4>商城</h4>
+								<p>农业电子商务把线下交易流程完全搬到网上，并根据多次实地考察和实践,有效的降低交易成本和实现地球村概念...</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 header-grid">
+							<div class="header-img1 wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+								<img src="__IMG__/icon4.png" class="img-responsive">
+								<h4>在线监测</h4>
+								<p>将物联网技术运用到传统农业中去，运用传感器和软件通过移动端或PC端平台对农业生产进行控制，使传统农业更具智慧...</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3 header-grid">
+							<div class="header-img1 wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+								<img src="__IMG__/icon6.png" class="img-responsive">
+								<h4>生态农业</h4>
+								<p>生态农业是按照生态学原理和生态经济规律，因地制宜地设计、组装、调整和管理农业生产和农村经济的系统工程体系...</p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="about-section">
+				<div class="container">
+					<h3 style="float:left;">"侬本佳园"项目</h3>
+					<p style="float:left; padding:15px 0 0 5px;">/&nbsp;&nbsp;物联网+互联网+农业</p>
+					<div class="about-grids">
+						<div class="col-md-5 about-img wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<img src="__IMG__/img1.jpg" class="img-responsive" style="padding:20px 0 0 0" alt="/">
+						</div>
+						<div class="col-md-7 about-grid wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<p>目前的传统农业，有着产品供求信息不对称、销售渠道不畅通等诸多因素制约着农村经济的发展。</p>
+							<p>本项目致力于构建基于物联网技术的农业电商平台，并将其推广到实际应用中。平台包括商城、农情资讯、农产品溯源、智慧农业四大模块，将传统农业注入物联网与互联网的基因。带给广大农民生产便利的同时，保障农产品消费者的食品安全。</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="work-section wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<div class="container">
+					<h3>智慧农业</h3>
+					<div class="latest-grids">
+						<div class="latest-grid1">
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img2.jpg" class="swipebox"><img src="__IMG__/img2.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img3.jpg" class="swipebox"><img src="__IMG__/img3.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img4.jpg" class="swipebox"><img src="__IMG__/img4.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img5.jpg" class="swipebox"><img src="__IMG__/img5.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+						<div class="latest-grid2">
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img6.jpg" class="swipebox"><img src="__IMG__/img6.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img7.jpg" class="swipebox"><img src="__IMG__/img7.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img8.jpg" class="swipebox"><img src="__IMG__/img8.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="col-md-3 latest-grid work">
+								<a href="__IMG__/img9.jpg" class="swipebox"><img src="__IMG__/img9.jpg" class="img-responsive" alt="/">
+									<div class="textbox">
+										<img src="__IMG__/magnify.png" class="img-responsive" alt="/">
+									</div>
+								</a>
+							</div>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="news-section">
+				<div class="container">
+					<h3>生态农业</h3>
+					<div class="news-grids">
+						<div class="col-md-4 news-grid wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<img src="__IMG__/img10.jpg" class="img-responsive" alt="/">
+							<h4 style="font-size:24px; line-height:50px; font-weight:bold;">时空结构型生态农业</h4>
+							<p class="date">这是一种根据生物种群的生物学、生态学特征和生物之间的互利共生关系而合理组建的农业生态系统，使处于不同生态位置的生物种群在系统中各得其所，相得益彰，更加充分的利用太阳能、水分和矿物质营养元素，是在时间上多序列、空间上多层次的三维结构，其经济效益和生态效益均佳。具体有果林地立体间套模式、农田立体间套模式、水域立体养殖模式，农户庭院立体种养模式等。</p>
+						</div>
+						<div class="col-md-4 news-grid wow fadeInDown Big animated animated" data-wow-delay="0.4s">
+							<img src="__IMG__/img11.jpg" class="img-responsive" alt="/">
+							<h4 style="font-size:24px; line-height:50px; font-weight:bold;">食物链型生态农业</h4>
+							<p class="date">这是一种按照能量流动和物质循环规律设计的一种良性循环的农业生态系统。系统中一个生产环节的产出是另一个生产环节的投入，使得系统中的废弃物多次循环利用，从而提高能量的转换率和资源利用率，获得较大的经济效益，并有效的防止农业废弃物对农业生态环境的污染。具体有种植业内部物质循环利用模式、养殖业内部物质循环利用模式、种养加工三结合的物质循环利用模式等。</p>
+						</div>
+						<div class="col-md-4 news-grid wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<img src="__IMG__/img12.jpg" class="img-responsive" alt="/">
+							<h4 style="font-size:24px; line-height:50px; font-weight:bold;">综合型生态农业</h4>
+							<p class="date">这是时空结构型和食物链型的有机结合，使系统中的物质得以高效生产和多次利用，是一种适度投入、高产出、少废物、无污染、高效益的模式类型。</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="news-section">
+				<div class="container">
+					<h3>农业电商</h3>
+					<div class="news-grids">
+						<div class="col-md-4 services-grid wow bounceInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<a href="__IMG__/p16.jpg" class="swipebox"><img src="__IMG__/p16.jpg" class="img-responsive" alt="" /></a>
+							<h5>农村电商和村淘创业</h5>
+							<p style="text-align:left;">阿里在2015年推出了村淘计划，大力推进“千县万村计划”，并计划在3～5年内投资100亿元，成立1000个县级服务中心和10万个村级服务站，惠及全国70%的农村人口。</p>
+						</div>
+						<div class="col-md-4 services-grid">
+							<a href="__IMG__/p17.jpg" class="swipebox"><img src="__IMG__/p17.jpg" class="img-responsive" alt="" /></a>
+							<h5>“互联网+农业” 社区O2O生鲜电商</h5>
+							<p style="text-align:left;">便捷的生鲜蔬果购物体验，健康的食品饮食，全新的现代生活方式，为人们生活提供了许多便利。生鲜电商在社区、商圈的落地，为其农业市场带来了巨大的机遇。</p>
+						</div>
+						<div class="col-md-4 services-grid wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+							<a href="__IMG__/p18.jpg" class="swipebox"><img src="__IMG__/p18.jpg" class="img-responsive" alt="" /></a>
+							<h5>"互联网+邮政农村电商"</h5>
+							<p style="text-align:left;">在当前“大众创业，万众创新”的形势下，“互联网+邮政农村电商”成了广大村民就业谋业的手段。</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="categories-section">
+			<div class="container">
+				<div class="footer-grids">
+
+					<div class="col-md-4 cat wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<h3>项目要点</h3>
+						<ul>
+							<li></li>
+							<li><strong style="color:#FFFF00">云平台:</strong>建立信息服务平台，推送种子、种苗、农资和农产品的最新行情信息，发布新品种与配套栽培技术，帮助农户与农技员、专家建立一对一的服务，建立涉农人员社交平台，安全农产品溯源查询。</li>
+							<li><strong style="color:#FFFF00">物联网:</strong>通过与示范基地栽培参数对比，提高农产品品质与产量预期。同时点对点进行线上病虫害诊断等，为农业增效、农户增收做保障。</li>
+							<li><strong style="color:#FFFF00">互联网:</strong>农资网上商城，厂家一级资源入驻，厂家直供用户，提供价廉可靠农资商品及相关服务。也是平台主要盈利点。
+							</li>
+							<li><strong style="color:#FFFF00">大数据:</strong>农业分析决策，数据库共享。</li>
+						</ul>
+					</div>
+					<div class="col-md-4 cont wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+						<h3>联系方式</h3>
+						<ul>
+							<li><i class="message"></i></li>
+							<li>
+								<a href="mailto:service@nbnb.net.cn">E-mail：<br/>service@nbnb.net.cn</a>
+							</li>
+						</ul>
+						<ul>
+							<li><i class="phone"></i></li>
+							<li><img src="__IMG__/erweima.jpg"></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-section">
+			<div class="container">
+				<div class="footer-top">
+					<div style="text-align:center; padding:0 0 10px 0;">
+						<a href="#"><img src="__IMG__/logo1.png"></a>
+					</div>
+				</div>
+
+				<div class="footer-bottom wow bounceInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<p>Copyright &copy; 2016 www.nbnb.net.cn</p>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						/*
+						 var defaults = {
+						 containerID: 'toTop', // fading element id
+						 containerHoverID: 'toTopHover', // fading element hover id
+						 scrollSpeed: 1200,
+						 easingType: 'linear'
+						 };
+						 */
+
+						$().UItoTop({
+							easingType: 'easeOutQuart'
+						});
+
+					});
+				</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			</div>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+
+.b-master,
+.c-c-in,
+.tscBtn,
+.xian,
+.past_courseBtn a:hover,
+.lh-r-w-head,
+.select-box1,
+.hNav li.current a,
+.hNav li a:hover,
+.c-l-top5,.t-title h4,
+.liveAndcourse-nav li a:hover,
+.liveAndcourse-nav li .current_nav,
+.h-title-1 li.current a {background-color: #0B803F;}
+
+.b-yellow {background-color: #FEB55D;}
+.b-green {background-color: #72cd91;}
+.c-green {color: #72cd91;}
+.c-yellow {color: #FEB55D;}
+.c-red {color: #C80500;}
+.c-blue {color: #16559f;}
+
+
+.c-master,
+.mt h2,
+.tit span,
+.select-unfolt,
+.past_courseBtn a,
+.sf-login a:hover,
+.sf-login a:hover p,
+.hMenu_third li a:hover,
+.u-menu-list dl dd li a:hover,
+.lh-list-more a:hover,
+.t-s-select .s-vv-txt:hover tt,
+.retrieve_password h3, .e-mail_back h3, .phone_back h3,
+.box-list ul li a:hover,.box-list ul li .current,
+.v-i-tab-a a:hover,.sub-v-i-tab-a a:hover,.sub-v-i-tab-a a.current,
+.v-i-tab-a a.current,
+.c-tab-title a:hover,
+.c-tab-title .current,
+.L-infor-nav ul li a:hover,
+.L-infor-nav ul li .current,
+.i-networkCourse .networkCourse_li span,
+.c-tab-title a:hover, .c-tab-title .current,
+.hot-news-l .s-c-desc a:hover,.i-news-r .i-r-news-list li a:hover,
+.i-j-item .i-j-item-first-a:hover,.last-i-j-item .c-more a:hover,.i-r-news-list li a:hover,.i-item-menu-hp .i-j-item .i-j-item-first-a:hover,
+.menu_tree_ul_second ol li.lh-menu-second .current-2 {color: #269d81;}
+
+.mt,
+.t-s-select,
+.past_courseBtn a,
+.live-preview_title,
+.lTitle,
+.tsTabContInp .tscInp,
+.u-c-title,
+.hNavWrap,
+.s-vv-ol,
+.rl-header,
+.j-cateright,
+.c-tab-title a:hover,
+.c-tab-title .current,
+.i-fbg-title span,
+.lh-list-more a:hover,
+.i-networkCourse li.current,
+.L-infor-nav ul li a:hover,
+.L-infor-nav ul li .current,
+.c-tab-title a:hover, .c-tab-title .current,
+.i-items .i-j-item.curr .i-j-item-bx,
+.fa_p1 .text_inpu:focus,.fa_p1 .code_input:focus,
+.retrieve_password h3, .e-mail_back h3, .phone_back h3 {border-color: #269d81;}

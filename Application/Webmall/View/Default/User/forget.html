@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<title>找回密码</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="__CSS__/common.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__/page-style.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__/cColor.css" />
+		<link rel="stylesheet" type="text/css" href="__CSS__/forget.css"/>
+		<!--[if lt IE 9]><script src="http://nt1.268xue.com/static/common/html5.js?v=1486400438591"></script><![endif]-->
+		<script src="__JS__/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="W-body">
+		<div class="topBarWrap" style="font-size: 12px;">
+			<div class="w1000">
+				<section class="cleafix">
+					<ul class="t-link c-ccc fr">
+						<li class="undis userNameLi"><tt class="c-666 vam">欢迎你</tt></li>
+						<li class="undis userNameLi">
+							<a href="http://nt1.268xue.com/uc/home.json">
+								<img src="__IMG__/user_default.jpg" id="cusImg" width="24" height="24" class="vam"><tt class="c-666 ml5 cusName">xxy1024235202@163.com</tt>
+							</a>|
+						</li>
+						<li id="msgnotice" class="pr newsLi undis">
+							<tt class="tip-news pa undis" id="msgCountId" title="0条未读消息">0</tt>
+							<a href="http://nt1.268xue.com/uc/letter.json" title="">消息</a>|
+						</li>
+						<li class="undis outLi">
+							<a href="javascript:void(0)" onclick="javascript:exit('pc')" title="退出">退出</a>
+						</li>
+						<li class="loginLi">
+							<a href="login.html" title="登录">登录</a>|</li>
+						<li class="registerLi">
+							<a href="login.html" title="注册">注册</a>|</li>
+						<li class="forgetPasswordLi">
+							<a href="forget.html" title="忘记密码">忘记密码</a>
+						</li>
+						<!-- <li><a href="javascript:addFavorite();" title="收藏本站" rel="sidebar" class="collect">收藏本站</a></li> -->
+					</ul>
+					<!-- /t-link -->
+				</section>
+			</div>
+		</div>
+		<header id="header" class="png">
+			<section class="head-wrap">
+				<section class="w1000">
+					<h1 class="logo-wrap"><a href="index.html" title="宁波农本" class="png"><img width="100%" src="__IMG__/logo.png"/></a></h1>
+					<div>
+						<section class="topSearchWrap">
+							<div class="tsTabCont t-s-box">
+
+								<section class="tsTabContInp">
+									<input id="searchInput" type="text" onkeyup="enterSubmit(event,'getSearch()')" placeholder='今天你想学什么课程？' x-webkit-speech="" class="tscInp" value="" />
+									<a href="javascript:void(0);" onclick="getSearch()" class="tscBtn">搜 索</a>
+								</section>
+								<form id="formSearch" method="post">
+									<input id="searchName" type="hidden" name="queryCourse.name" value="" />
+								</form>
+							</div>
+						</section>
+						<section class="top-link pr">
+							<!-- <wb:follow-button uid="3750696877" type="red_2" width="" height="24" class="pa" style="left: -230px;top:-26px;" ></wb:follow-button> -->
+							<div class="mt30">
+								<section class="my-course-wrap">
+									<aside class="aMyCourBox fl pr aMyCourBox1" name="aMyCourBox1">
+										<a href="javascript: void(0)" class="aMyCour m-c-btn hand">
+											<tt class="vam f-fM">学习记录</tt><em class="icon14 ml5">&nbsp;</em>
+										</a>
+										<div class="m-c-box undis">
+											<section class="pr m-c">
+												<span class="pa white-bg">&nbsp;</span>
+
+												<div id="notLogin" class="tac">
+													<em class="c-tips-2 icon24">&nbsp;</em>
+													<font class="c-999 fsize12 vam">
+														对不起，你还没有
+														<a href="http://nt1.268xue.com/login.json" title="登录" class="c-master ml5">登录</a>
+													</font>
+												</div>
+												<div id="nocoursebug" class="tac undis">
+													<em class="c-tips-2 icon24">&nbsp;</em>
+													<font class="c-999 fsize12 vam">您还没有学习记录~~</font>
+												</div>
+												<div class="my-c-list undis" id="studulist">
+													<div class="tac hLh30"><img src="/static/edu/images/page/loading.gif?v=1486227637308">
+													</div>
+												</div>
+											</section>
+										</div>
+									</aside>
+									<aside class="aMyCourBox fl pr aMyCourBox2" name="aMyCourBox2">
+										<a href="personal.html" class="shopCar hand pr" style="overflow:inherit;" title="个人中心">
+
+											<em class="icon24">&nbsp;</em><tt class="vam f-fM">个人中心</tt>
+										</a>
+										<div class="m-c-box shopCar-box undis">
+											<section class="pr m-c">
+												<span class="pa white-bg">&nbsp;</span>
+
+												<div id="notLogin" class="tac">
+													<em class="c-tips-2 icon24">&nbsp;</em>
+													<font class="c-999 fsize12 vam">
+														对不起，你还没有
+														<a href="http://nt1.268xue.com/login.json" title="登录" class="c-master ml5">登录</a>
+													</font>
+												</div>
+												<div id="nocoursebug" class="tac undis">
+													<em class="c-tips-2 icon24">&nbsp;</em>
+													<font class="c-999 fsize12 vam">您还没有学习记录~~</font>
+												</div>
+												<div class="my-c-list undis" id="studulist">
+													<div class="tac hLh30"><img src="/static/edu/images/page/loading.gif?v=1486227637308">
+													</div>
+												</div>
+											</section>
+										</div>
+									</aside>
+
+									<div class="clear"></div>
+								</section>
+							</div>
+						</section>
+
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</section>
+			</section>
+			<div class="hNavWrap">
+				<section class="w1000 clearfix">
+					<ul class="hNav fl" id="guideInfo">
+						<!-- current -->
+						<li>
+							<a href="study.html" title="首页">首页
+							</a>
+						</li>
+						<li>
+							<a href="course.html" title="课程">课程
+							</a>
+						</li>
+						<li>
+							<a href="shop.html" title="套餐">商城
+							</a>
+						</li>
+						<li>
+							<a href="online.html" title="直播">在线监测
+							</a>
+						</li>
+						<li>
+							<a href="trace.html" title="专家">农产品溯源
+							</a>
+						</li>
+						<li>
+							<a href="news.html" title="考试" target="_blank">农业资讯
+							</a>
+						</li>
+
+					</ul>
+				</section>
+			</div>
+		</header> 
+		<section class="w1000">
+			<div class="pathwray">
+				<ol class="clearfix c-master f-fM fsize14">
+					<li>
+						<a href="/" title="首页" class="c-master">首页</a> &gt;</li>
+					<li><span>找回密码</span></li>
+				</ol>
+			</div>
+		</section>
+		<div id="retrieve_pwd" class="retrieve_password">
+			<h3>找回密码<span></span></h3>
+			<div class="con_left contents">
+				
+				<div id="emailFind" class="box-in find">
+					<h4>邮箱找回<span>邮件会发放到您的邮箱，请注意查收</span></h4>
+					<p class="fa_p1"> <label>邮箱：</label><input id="forgot_email" onfocus="clearEmailError()" name="customer.email" maxlength="30" class="text_input" type="text"> </p>
+					<p class="chooseitem padl80 colorred" class="e-mail_back"></p>
+					<p class="chooseitem padl80 colorred">
+						<font id="message_email"></font>
+					</p><br> <input type="hidden" id="codeName" name="codeName" value="" />
+					<p id="drag"></p>
+					<div>
+						<p class="fa_p1 padl80">
+							<a class="go-live-btn" href="javascript:void(0)" onclick="forgotPwdEmail();"><span>提交</span></a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="getmail" class="e-mail_back" style="display:none;">
+			<h3>找回密码</h3>
+			<div class="send_password" style="width: 760px;">
+				<h6 style="width: 760px;"><a href="http://nt1.268xue.com/front/forget_passwd.json"><img src="__IMG__/bg_fan.png" class="vam"/> 返回上一页</a></h6>
+				<div class="send_pass_txt">
+					<div class="pic"><img src="__IMG__/big_mail_bg.png" /></div>
+					<div class="cont">
+						<p class="fg_p1">我们向您的邮箱<span id="getecode"></span>发送了一封邮件，请及时修改密码</p>
+						<p class="fg_p2">如果您没收到我们发给的邮件，
+							<a href="/front/forget_passwd.json" class="c-orange">点击重试</a>
+						</p>
+						<p class="mt20">
+							<a class="commBtn04" href="javascript:void(0)" onclick="logins()">点击这里登陆</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="onlineConsult" style="display: none;">
+			<dl> <dt> <a href="javascript: void(0)" id="goTop"> <em class="ocgld-em gT-btn">&nbsp;</em> <span class="fb-hover-text">返回顶部</span> </a> </dt>
+				<dd class="pr onlineC-item1">
+					<a href="JavaScript:void(0)" class="smgz-a"> <em class="ocgld-em smgz-btn">&nbsp;</em> <span class="fb-hover-text">扫描关注</span>
+						<div class="smgz-pic" id="scanAtten"> <img src="" id="ewm_index" width="150" height="150" class="dis" />
+							<p class=" fsize14 f-fM c-666 tac">扫一扫，关注我们</p> <span class="ewm-jiao"><img src="http://nt1.268xue.com/static/edu/images/ewm-y-icon.png?v=1486400438591" width="7" height="14"></span> </div>
+					</a>
+				</dd>
+				<dd class="onlineC-item1">
+					<a href="" target="_blank" title="在线咨询" id="online_zx"> <em class="ocgld-em zxzx-btn">&nbsp;</em> <span class="fb-hover-text">在线咨询</span> </a>
+				</dd>
+				<dd>
+					<a href="/front/to_free_back.json" target="_blank" title="意见反馈"> <em class="ocgld-em wtfk-btn">&nbsp;</em> <span class="fb-hover-text">意见反馈</span> </a>
+				</dd>
+			</dl>
+		</div>
+		<script src="__JS__/forget.js" type="text/javascript" charset="utf-8"></script>
+		<script src="__JS__/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#drag').drag();
+		</script>
+	</body>
+
+</html>

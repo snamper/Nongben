@@ -1,0 +1,72 @@
+<layout name="Layout/dialog_layout"  replace="{__CONTENT__}" />
+
+<body>
+    <div class="wrap">
+        <notempty name="course">
+            <div class="table_list mb20">
+                    <table width="100%" class="table_full">
+                        <tr>
+                            <td width="15%">课程名称:{$course.name}</td>
+                            <td width="42.5%">评论数:{$comment_count}</td>
+                            <td width="42.5%">发布时间:{$course.gmt_create}</td>
+                        </tr>
+                        <tr>
+                            <td><img src="{$course.path_img}" alt="课程图标" width="110" height="110" style="padding-top: 10px;padding-bottom: 10px"></td>
+                            <td colspan="2">
+                                {$course.description}
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+        </notempty>
+
+
+        <form class="J_validateForm J_ajaxForm" data-role="list" method="post">
+            <div class="table_list">
+                <table width="100%">
+                        <tr>
+                            <th colspan="4">课程评论列表</th>
+                        </tr>
+                        <tr>
+                            <td>评论用户</td>
+                            <td>评论内容</td>
+                            <td>评论时间</td>
+                            <td data-code-group="comment_del">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="comment" item="list">
+                    <tr>
+                        <td><a href="{:U('user/detail',array('id'=>$list['user_id']))}">{$list.name}</a></td>
+                        <td>{$list.comment}</td>
+                        <td>{$list.gmt_create}</td>
+                        <td data-code-group="comment_del">
+                            <a href="{:U('do_del', array('id'=>$list['id']))}" class="tablelink J_ajax_del" title="评论删除" data-msg="确定要删除这条评论吗？" data-code="comment_del">[评论删除]</a>
+                        </td>
+                    </tr>
+                    </foreach>                  
+                    </tbody>
+                </table>
+            </div>
+        </form>
+        <div class="pop_bottom">
+            <a type="submit" class="btn" href="javascript:history.go(-1)" title=返回" role="button">返回</a>
+        </div>
+        <include file="Public:page" />      
+    </div>
+
+<style type="text/css">
+    .table_full th,tr,td{
+        text-align: center;
+        border: 1px solid #9e9e9e;
+    }
+    .table_list{
+        padding:10px 10px 10px 10px;
+    }
+    .table_list th,td,tr{
+        padding:5px 5px 5px 5px;
+        text-align: center;
+    }
+</style>
+</body>
+

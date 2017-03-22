@@ -1,0 +1,63 @@
+<layout name="Layout/base_layout"  replace="{__CONTENT__}" />
+
+<body>
+
+<div class="wrap">
+
+    <div class="nav">
+        <div class="form_title">
+            <span>配置管理</span>
+        </div>
+    </div>
+
+    <form class="J_validateForm J_ajaxForm" data-role="list" action="{:U('config/index')}" method="post">
+        <div>
+
+            <div class="nav_tab">
+                <ul>
+                    <li><a href="javascript:void(0)" class="selected">系统配置</a></li>
+                    <li><a href="{:U('shop')}">商城配置</a></li>
+                </ul>
+            </div>
+
+            <div id="tab1" class="tabson">
+                <table class="tab_info">
+                    <tr>
+                        <col width="20%"/>
+                        <col width="50%"/>
+                        <col width="30%"/>
+                    </tr>
+                    <tr>
+                        <th><label>网站名称<b>*</b></label></th>
+                        <td><input name="" type="text" class="input length_4" placeholder="网站名称"/></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th><label>站点地址<b>*</b></label></th>
+                        <td><input name="" type="text" class="input length_4" placeholder="网站名称"/></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th><label>管理员邮箱<b>*</b></label></th>
+                        <td><input name="" type="text" class="input length_4" placeholder="网站名称"/></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="btn_wrap">
+            <div class="btn_wrap_pd">
+                <button type="submit" class="btn btn_submit mr10 J_ajax_submit_btn J_validate_btn">提交</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script type="text/javascript" src="__JS__/common.js"></script>
+
+</body>

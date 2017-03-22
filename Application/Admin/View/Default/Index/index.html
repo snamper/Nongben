@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html style="height:100%; overflow: hidden">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>欢迎登录后台管理系统</title>
+    <link href="__CSS1__/bootstrap.min.css" rel="stylesheet">
+    <link href="__CSS1__/datepicker3.css" rel="stylesheet">
+    <link href="__CSS1__/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+    <include file="Index:top" />
+</div>
+
+
+<!--左边导航区-->
+    <include file="Index:left" />
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active_top">首页</li>
+        </ol>
+    </div>
+<div class="mainn" data-href="{:U('main')}" style="height: 100%">
+</div>
+
+</body>
+
+<script src="__JS1__/jquery-1.11.1.min.js"></script>
+<script src="__JS1__/bootstrap.min.js"></script>
+<script>
+    var defaulhref = $('.mainn').data('href');
+    var iframeAttr = {
+        src: defaulhref,
+        id: 'iframepage',
+        frameborder: '0',
+        scrolling: 'auto',
+        width: '100%',
+        height: '100%'
+    };
+    $('.mainn iframe').remove();
+    var iframe = $('<iframe/>').prop(iframeAttr).appendTo('.mainn');
+
+    //点击菜单加载iframe
+    $('.leftmenu').on('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var $this = $(this),id = $this.attr('data-id');
+        var href = this.href;
+
+        var iframeAttr = {
+            src: href,
+            id: 'iframepage',
+            frameborder: '0',
+            scrolling: 'auto',
+            width: '100%',
+            height: '100%'
+        };
+        $('.mainn iframe').remove();
+        var iframe = $('<iframe/>').prop(iframeAttr).appendTo('.mainn');
+        $('.active_top').html($(this).attr('data-value'));
+    });
+</script>
+
+
+</html>

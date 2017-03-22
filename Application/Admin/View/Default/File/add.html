@@ -1,0 +1,45 @@
+
+<layout name="Layout/dialog_layout"  replace="{__CONTENT__}" />
+
+<body style="width: 400px;">
+<form class="J_validateForm J_ajaxForm" data-role="list" action="{:U('file/do_add')}" method="post">
+    <div class="pop_cont pop_table" style="height:auto;">
+        <table width="100%">
+            <tr>
+				<th>文件地址<!--文件地址--></th>
+				<td>
+                    <input type="text" name="path" class="input length_6" value="">
+                <td>
+			</tr>
+            <tr>
+				<th>状态<!--状态--></th>
+				<td>
+                    <input type="text" name="status" class="input length_3" value="">
+                <td>
+			</tr>
+            <tr>
+				<th>类型(1:图<!--类型(1:图片 2:文件)--></th>
+				<td>
+                    <input type="text" name="type" class="input length_3" value="">
+                <td>
+			</tr>
+            <tr>
+				<th>创建时间<!--创建时间--></th>
+				<td>
+                    <input type="text" name="gmtCreate" class="input length_3 J_datetime date" value="">
+                <td>
+			</tr>
+            <tr>
+				<th>备注<!--备注--></th>
+				<td>
+                    <input type="text" name="note" class="input length_6" value="">
+                <td>
+			</tr>
+        </table>
+    </div>
+    <div class="pop_bottom">
+        <button type="button" class="btn fr" id="J_dialog_close">取消</button>
+        <button type="submit" class="btn btn_submit mr10 fr J_ajax_submit_btn J_validate_btn">提交</button>
+    </div>
+</form>
+</body>
