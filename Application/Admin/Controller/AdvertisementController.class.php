@@ -15,7 +15,7 @@ class AdvertisementController extends BaseController{
     }
 
     /**
-     * 数据列表
+     * 数据列表1
      */
     public function index(){
         $advertisementList = $this->advertisementLogic->getList();
